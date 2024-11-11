@@ -26,14 +26,6 @@ console.log(form);
 const inputs = document.querySelectorAll("input");
 console.log(inputs);
 
-let usernumber = [];
-function saveusernumber (){
-    for(let i = 0; i < inputs.length; i++){
-        usernumber.push(inputs[i].value);
-    }
-}
-console.log(usernumber)
-
 const confirm = document.querySelector(".btn-primary");
 console.log(confirm);
 
@@ -64,3 +56,16 @@ const clock = setInterval(function(){
         form.classList.remove('d-none');
     }
 }, 1000)
+
+//dopo il click del pulsante salvo i valori inseriti dall'utente all'interno di un nuovo array
+
+let usernumber = [];
+confirm.addEventListener("click", saveusernumber)
+function saveusernumber (){
+    event.preventDefault();
+    for(let i = 0; i < inputs.length; i++){
+        usernumber.push(inputs[i].value);
+    }
+}
+
+
