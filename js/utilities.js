@@ -13,14 +13,14 @@ function random(min, max){
 
 //Es. Utilizzo 1
 //Numeri definiti in precedenza
-let n = random(1, 6);
-console.log (n);
+//let n = random(1, 6);
+//console.log (n);
 
 //Es. Utilizzo 2
-let min = parseInt(prompt ("Inserisci il numero minimo"));
-let max = parseInt(prompt ("Inserisci il numero massimo"));
-num = random(min, max);
-console.log (n);
+//let min = parseInt(prompt ("Inserisci il numero minimo"));
+//let max = parseInt(prompt ("Inserisci il numero massimo"));
+//num = random(min, max);
+//console.log (n);
 
 
 
@@ -41,8 +41,8 @@ function evenodd(n){
 }
 
 //Es. Utilizzo 1
-n = parseInt(prompt("Inserisci un numero"));
-paridispari = evenodd(n);
-console.log (paridispari);
+//n = parseInt(prompt("Inserisci un numero"));
+//paridispari = evenodd(n);
+//console.log (paridispari);
 
 /******************* Nome Funzione *******************/

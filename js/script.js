@@ -10,6 +10,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 console.clear();
 
 
+//prendo i dati
 const countdown = document.getElementById("countdown");
 console.log(countdown);
 
@@ -38,3 +39,12 @@ console.log(confirm);
 
 const message = document.getElementById("message");
 console.log(message);
+
+//Genero nuovi li contenenti un numero random e li appendo all'ul
+
+for (let i = 0; i < 5; i++){
+    let newli = document.createElement("li");
+    newli.textContent = random(1, 100);
+    console.log("newli");
+    nlist.appendChild(newli);
+}
