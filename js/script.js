@@ -11,7 +11,7 @@ console.clear();
 
 
 //prendo i dati
-const countdown = document.getElementById("countdown");
+let countdown = document.getElementById("countdown");
 console.log(countdown);
 
 const instructions = document.getElementById("instructions");
@@ -44,7 +44,23 @@ console.log(message);
 
 for (let i = 0; i < 5; i++){
     let newli = document.createElement("li");
-    newli.textContent = random(1, 100);
+    newli.textContent = random(1, 50);
     console.log("newli");
     nlist.appendChild(newli);
 }
+
+//attivo un countdown di 30 sec. (ora 5 sec. per testare) per far memorizzare all'utente i numeri e al suo scadere d-none a tutto e faccio apparire le caselle il form con le caselle di input
+
+let time = 30;
+const clock = setInterval(function(){
+    if (time > 25){
+        time -= 1;
+        countdown.innerHTML = time;
+    } else {
+        clearInterval(clock);
+        countdown.classList.add('d-none');
+        instructions.classList.add('d-none');
+        nlist.classList.add('d-none');
+        form.classList.remove('d-none');
+    }
+}, 1000)
