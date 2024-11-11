@@ -72,7 +72,7 @@ confirm.addEventListener("click", saveusernumber)
 function saveusernumber (){
     event.preventDefault();
     for(let i = 0; i < inputs.length; i++){
-        usernumber.push(inputs[i].value);
+        usernumber.push(parseInt(inputs[i].value));
         if (i === inputs.length - 1){
             console.log(usernumber);
             const igrup = document.getElementById("input-group");
@@ -83,11 +83,13 @@ function saveusernumber (){
 //confronto i numeri dell'utente con quelli estratti e invio il risultato
  let result = [];
  for(let i = 0; i < usernumber.length; i++) {
-     if (generatednumbers.includes(usernumber[i]) && !result.includes(usernumber[i])) {
-        result.push(usernumber[i]);
-     }
+    for(let i2 = 0; i2 < generatednumbers.length; i2++){
+        if (usernumber[i] === generatednumbers[i2]){
+            result.push(usernumber[i]);
+        }
+    }
  }
- message.innerHTML = `Hai indovinato ${result.length} numeri: ${result.join(', ')}`;
+ message.innerHTML = `Hai indovinato ${result.length} numeri: ${result.join(' , ')}`;
 }
 
 
