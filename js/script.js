@@ -41,7 +41,15 @@ for (let i = 0; i < 5; i++){
     nlist.appendChild(newli);
 }
 
-//attivo un countdown di 30 sec. (ora 5 sec. per testare) per far memorizzare all'utente i numeri e al suo scadere d-none a tutto e faccio apparire le caselle il form con le caselle di input
+ // Salvo in un nuovo array i numeri generati nella ul
+ let generatednumbers = [];
+ let listitems = nlist.querySelectorAll('li');
+ for(let i = 0; i < listitems.length; i++) {
+     generatednumbers.push(parseInt(listitems[i].textContent));
+ }
+console.log (generatednumbers)
+
+//Attivo un countdown di 30 sec. (ora 5 sec. per testare) per far memorizzare all'utente i numeri e al suo scadere d-none a tutto e faccio apparire le caselle il form con le caselle di input
 
 let time = 30;
 const clock = setInterval(function(){
@@ -65,7 +73,22 @@ function saveusernumber (){
     event.preventDefault();
     for(let i = 0; i < inputs.length; i++){
         usernumber.push(inputs[i].value);
+        if (i === inputs.length - 1){
+            console.log(usernumber);
+            const igrup = document.getElementById("input-group");
+            igrup.classList.add('d-none');
+            confirm.classList.add('d-none');
+        }
     }
+//confronto i numeri dell'utente con quelli estratti e invio il risultato
+ let result = [];
+ for(let i = 0; i < usernumber.length; i++) {
+     if (generatednumbers.includes(usernumber[i]) && !result.includes(usernumber[i])) {
+        result.push(usernumber[i]);
+     }
+ }
+ message.innerHTML = `Hai indovinato ${result.length} numeri: ${result.join(', ')}`;
 }
+
 
 
