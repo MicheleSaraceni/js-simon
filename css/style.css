@@ -2,6 +2,15 @@
 
 /* # COUNTDOWN */
 
+body {
+	background-color: rgb(131, 130, 130);
+}
+
+.color {
+	background-color: rgb(202, 202, 202);
+	border: 2px solid rgb(207, 207, 207);
+}
+
 #countdown {
 	font-weight: bolder;
 	font-size: 5rem;
@@ -14,4 +23,41 @@
 
 input {
 	width: 80px !important;
+}
+
+.mtb-20{
+	margin: 30px 0;
+}
+
+.container{
+	border: 1px solid gray;
+	background-color: rgb(160, 160, 160);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+#answers-form{
+	border: 1px solid gray;
+	background-color: rgb(160, 160, 160);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.imgcountdown{
+	width: 126px;
+	height: 126px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(/img/loading-7528_128.gif);
+	background-size: cover;
+	background-size: contain;
+}
+
+#message{
+	margin-top: 10px;
+	font-size: 30px;
 }

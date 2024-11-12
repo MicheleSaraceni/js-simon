@@ -16,18 +16,20 @@
 </head>
 
 <body>
-  <div class="d-flex vh-100 w-50 m-auto d-flex justify-content-center align-items-center flex-column">
+  <div class="color d-flex vh-100 w-50 m-auto justify-content-center align-items-center flex-column">
     <!-- Countdown -->
-    <div id="countdown" class="fs-1 fw-bolder"></div>
-    <p id="instructions">Memorizza i numeri entro il tempo limite!</p>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <div id="countdown" class="imgcountdown fs-1 fw-bolder"></div>
+      <p id="instructions" class="mtb-20">Memorizza i numeri entro il tempo limite!</p>
 
-    <!-- Numbers -->
-    <ul id="numbers-list" class="d-flex gap-5 list-unstyled"></ul>
-
+      <!-- Numbers -->
+      <ul id="numbers-list" class="d-flex gap-5 list-unstyled"></ul>
+    </div>
+    
     <!-- Form -->
     <form id="answers-form" class="d-none">
-      Pensa bene e inserisci i numeri che ricordi, poi conferma premendo il pulsante.
-      <div class="d-flex gap-5" id="input-group">
+      <p class="text-center">Pensa bene e inserisci i numeri che ricordi, poi conferma premendo il pulsante.</p>
+      <div class="mtb-20 d-flex justify-content-around" id="input-group">
         <input type="number" class="form-control" min="1" max="50" required>
         <input type="number" class="form-control" min="1" max="50" required>
         <input type="number" class="form-control" min="1" max="50" required>

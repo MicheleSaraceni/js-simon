@@ -11,26 +11,14 @@ console.clear();
 
 
 //prendo i dati
+const container = document.querySelector(".container");
 let countdown = document.getElementById("countdown");
-console.log(countdown);
-
 const instructions = document.getElementById("instructions");
-console.log(instructions);
-
 const nlist = document.getElementById("numbers-list");
-console.log(nlist);
-
 const form = document.getElementById("answers-form");
-console.log(form);
-
 const inputs = document.querySelectorAll("input");
-console.log(inputs);
-
 const confirm = document.querySelector(".btn-primary");
-console.log(confirm);
-
 const message = document.getElementById("message");
-console.log(message);
 
 //Genero nuovi li contenenti un numero random e li appendo all'ul
 
@@ -53,7 +41,7 @@ console.log (generatednumbers)
 
 let time = 30;
 const clock = setInterval(function(){
-    if (time > 25){
+    if (time > 0){
         time -= 1;
         countdown.innerHTML = time;
     } else {
@@ -61,6 +49,7 @@ const clock = setInterval(function(){
         countdown.classList.add('d-none');
         instructions.classList.add('d-none');
         nlist.classList.add('d-none');
+        container.classList.add('d-none');
         form.classList.remove('d-none');
     }
 }, 1000)
@@ -69,7 +58,7 @@ const clock = setInterval(function(){
 
 let usernumber = [];
 confirm.addEventListener("click", saveusernumber)
-function saveusernumber (){
+function saveusernumber (event){
     event.preventDefault();
     for(let i = 0; i < inputs.length; i++){
         usernumber.push(parseInt(inputs[i].value));
